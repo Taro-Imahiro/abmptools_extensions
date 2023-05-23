@@ -11,8 +11,8 @@ def read_and_create_script():
 
     log_files = sorted(filter(log_file_pattern.match, os.listdir(log_dir)), key=sort_key)
 
-    # Create/overwrite run.sh with the sh shebang
-    with open("run.sh", "w") as file:
+    # Create/overwrite abmp_lipid_protein.sh with the sh shebang
+    with open("abmp_lipid_protein.sh", "w") as file:
         file.write("#!/bin/sh\n")
 
     for log_file in log_files:
@@ -32,8 +32,8 @@ def read_and_create_script():
         # Subtract num_tip from num_frag
         result = num_frag - num_tip
 
-        # Append new command to run.sh
-        with open("run.sh", "a") as file:
+        # Append new command to abmp_lipid_protein.sh
+        with open("abmp_lipid_protein.sh", "a") as file:
             file.write(f"python -m abmptools.getifiepieda --frag 444-{result} 1-442 -i ./fmolog/{prod_file}\n")
 
 read_and_create_script()
