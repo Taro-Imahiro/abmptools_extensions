@@ -12,9 +12,9 @@ For each log file, the script reads the file line by line. It looks for lines th
 The script calculates a result by subtracting the number found in the "TIP" line from the number found in the "num_fragment" line.
 
 ### 1-2. Requirements
-Installed Python 3.6 or later
+- Installed Python 3.6 or later
 
-Availability of os and re modules from Python's standard library
+- Availability of os and re modules from Python's standard library
 
 
 ### 1-3. Usage
