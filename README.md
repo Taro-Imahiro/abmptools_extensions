@@ -1,10 +1,10 @@
 # abmptools_extensions
 ABINIT-MP解析支援ツールの入力支援等
 
-## lipid_frag_counter.py -- Python Script for Processing Log Files
+## 1. lipid_frag_counter.py -- Python Script for Processing Log Files
 This Python script reads files in the format abmp-frag*.log, extracts fragment information from these files, and uses that information to generate a run.sh shell script.
 
-### How the Script Works
+### How this Script Works
 The script finds all abmp-frag*.log files in the log_dat directory.
 
 For each log file, the script reads the file line by line. It looks for lines that start with "num_fragment", "TIP", and "infile:", and extracts information from those lines.
@@ -18,6 +18,7 @@ Availability of os and re modules from Python's standard library
 
 
 ### Usage
+**Please change the directory names and log file names in the program as needed.**
 ```
 python lipid_frag_counter.py
 ```
